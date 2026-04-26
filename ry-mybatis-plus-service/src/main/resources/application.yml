@@ -1,0 +1,23 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/greenbeanlock?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123456
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+ry:
+  openapi:
+    base-url: https://ap9.fscloud.com.cn
+    tenant: wisedeer
+    app-id: lt_ry
+    secret-key: K7isfXwAhA69opaUzETJiXPVZiXp1i19iTdAu0kh
+    entity-name: new_srv_workorder
+    default-filter: "(new_dealstatus eq 1 or new_dealstatus eq 2 )"
+    default-page-size: 20
